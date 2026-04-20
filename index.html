@@ -4,21 +4,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>التاجر للدعاية والإعلان</title><link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet"><style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Cairo',sans-serif}
-body{
-background: radial-gradient(circle at 20% 20%, #1a1a2e, #0a0a0a 40%),
-linear-gradient(120deg, #0a0a0a, #111827);
-background-size:200% 200%;
-animation: bgMove 10s ease-in-out infinite;
-color:#fff;overflow-x:hidden;
-}
+body{background:#0a0a0a;color:#fff;overflow-x:hidden}
 
-@keyframes bgMove{
-0%{background-position:0% 50%}
-50%{background-position:100% 50%}
-100%{background-position:0% 50%}
-}
-
-/* NAV */
 nav{
 position:fixed;top:0;width:100%;display:flex;justify-content:space-between;align-items:center;
 padding:18px 10%;
@@ -29,9 +16,7 @@ z-index:1000
 }
 nav h2{font-weight:800;letter-spacing:1px}
 nav ul{display:flex;gap:18px;list-style:none;font-size:14px;opacity:.8}
-nav ul li{cursor:pointer}
 
-/* HERO APPLE STYLE */
 .hero{
 height:100vh;
 display:flex;
@@ -44,37 +29,15 @@ background:radial-gradient(circle at top,#1a1a1a,#000)
 .hero h1{
 font-size:64px;
 font-weight:900;
-letter-spacing:-1px;
 line-height:1.1
 }
-.hero p{
-margin-top:15px;
-font-size:18px;
-opacity:.75;
-max-width:700px
-}
-.btn{
-margin-top:25px;
-padding:14px 35px;
-border:none;
-border-radius:30px;
-background:#fff;
-color:#000;
-font-weight:700;
-cursor:pointer;
-transition:.3s
-}
-.btn:hover{transform:scale(1.06)}
+.hero p{margin-top:15px;font-size:18px;opacity:.75;max-width:700px;margin-inline:auto}
+.btn{margin-top:25px;padding:14px 35px;border:none;border-radius:30px;background:#fff;color:#000;font-weight:700;cursor:pointer}
 
 section{padding:110px 10%}
 .title{text-align:center;font-size:44px;margin-bottom:45px;font-weight:900}
 
-/* GRID */
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:25px
-}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:25px}
 
 .card{
 background:rgba(255,255,255,0.05);
@@ -83,71 +46,35 @@ border-radius:22px;
 padding:30px;
 backdrop-filter:blur(18px);
 transition:.4s;
+text-align:center
 }
 .card:hover{transform:translateY(-8px);background:rgba(255,255,255,0.08)}
 
-/* ABOUT */
-.about p{
-font-size:18px;
-line-height:2;
-opacity:.85;
-max-width:900px;
-margin:auto;
-text-align:center
-}
+.service svg{margin-bottom:10px}
+.service:hover{box-shadow:0 0 25px rgba(255,255,255,0.15)}
 
-/* STATS */
-.stats .card{text-align:center}
+.about p{font-size:18px;line-height:2;opacity:.85;max-width:900px;margin:auto;text-align:center}
+
 .stats h2{font-size:48px;font-weight:900}
 .stats p{opacity:.7}
 
-/* TESTIMONIALS (CLEAN) */
-.testimonials{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:20px
-}
-.testimonials .card{
-font-size:15px;
-line-height:1.8
-}
+.testimonials .hidden{display:none}
 
-/* CONTACT */
-.contact{background:#111}
-input,textarea,select{
-width:100%;padding:14px;margin:10px 0;
-border-radius:12px;border:none;
-background:#1a1a1a;color:#fff
-}
-button{
-padding:14px 25px;
+button.more-btn{
+margin-top:25px;
+padding:12px 25px;
 border:none;
-border-radius:30px;
-background:#25d366;
-color:#fff;
+border-radius:25px;
+background:#fff;
+color:#000;
 font-weight:700;
 cursor:pointer
 }
 
+.contact{background:#111}
+input,textarea,select{width:100%;padding:14px;margin:10px 0;border-radius:12px;border:none;background:#1a1a1a;color:#fff}
+button{padding:14px 25px;border:none;border-radius:30px;background:#25d366;color:#fff;font-weight:700;cursor:pointer}
 footer{text-align:center;padding:40px;opacity:.5}
-/* SERVICE HOVER GLOW */
-.service{
-text-align:center;
-transition:.4s;
-position:relative;
-}
-.service svg{
-margin-bottom:10px;
-color:#fff;
-}
-.service:hover{
-transform:translateY(-10px);
-box-shadow:0 0 25px rgba(255,255,255,0.15), 0 0 60px rgba(255,255,255,0.05);
-}
-.service:hover svg{
-filter:drop-shadow(0 0 8px #ffffff);
-}
-
 </style></head>
 <body><nav>
 <h2>التاجر</h2>
@@ -159,59 +86,45 @@ filter:drop-shadow(0 0 8px #ffffff);
 <li>الآراء</li>
 <li>تواصل</li>
 </ul>
-</nav><!-- HERO --><div class="hero">
+</nav><div class="hero">
 <div>
 <h1>نحوّل الإعلانات إلى عملاء حقيقيين</h1>
-<p>شركة التاجر للدعاية والإعلان – نبني العلامات التجارية ونحقق نتائج فعلية من التسويق الرقمي والإعلانات الممولة</p>
+<p>شركة التاجر للدعاية والإعلان – حلول تسويقية متكاملة تحقق نتائج فعلية</p>
 <button class="btn">ابدأ الآن</button>
 </div>
-</div><!-- ABOUT --><section>
+</div><section class="about">
 <div class="title">من نحن</div>
-<div class="about">
-<p>
-شركة التاجر للدعاية والإعلان هي شركة متخصصة في التسويق الرقمي والإعلانات الممولة وبناء الهوية التجارية.
-نساعد الشركات والمتاجر على النمو الحقيقي وليس فقط الظهور، من خلال استراتيجيات مدروسة تعتمد على تحليل السوق واستهداف العملاء بدقة.
-هدفنا هو تحويل أي مشروع إلى علامة تجارية قوية قادرة على المنافسة في السوق.
-</p>
-</div>
-</section><!-- SERVICES --><section>
+<p>شركة التاجر للدعاية والإعلان متخصصة في التسويق الرقمي، الإعلانات الممولة، وتصميم الهويات البصرية، نساعد الشركات على النمو الحقيقي وتحقيق مبيعات فعلية من خلال استراتيجيات مدروسة.</p>
+</section><section>
 <div class="title">خدماتنا</div>
-<div class="grid"><div class="card service">
-<svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 17l6-6 4 4 8-8"/></svg>
-<br>إدارة الحملات الإعلانية الممولة
-</div><div class="card service">
-<svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v12H4z"/><path d="M4 16l4 4h8l4-4"/></svg>
-<br>إدارة صفحات السوشيال ميديا باحتراف
-</div><div class="card service">
-<svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/></svg>
-<br>تصميم جرافيك وهوية بصرية كاملة
-</div><div class="card service">
-<svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16v12H4z"/><path d="M8 10h8"/></svg>
-<br>تصميم مواقع إلكترونية حديثة
-</div><div class="card service">
-<svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l8 4v6c0 5-3.5 9-8 10C7.5 21 4 17 4 12V6z"/></svg>
-<br>برمجة بوتات تيليجرام ذكية
-</div><div class="card service">
-<svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="M7 14l3-3 4 4 5-6"/></svg>
-<br>استراتيجيات تسويق لزيادة المبيعات
-</div></div>
-</section><!-- STATS --><section class="stats">
+<div class="grid">
+<div class="card service">📢 إدارة الحملات الإعلانية الممولة</div>
+<div class="card service">📱 إدارة صفحات السوشيال ميديا</div>
+<div class="card service">🎨 تصميم هوية بصرية</div>
+<div class="card service">🌐 تصميم مواقع إلكترونية</div>
+<div class="card service">🤖 برمجة بوتات تيليجرام</div>
+<div class="card service">📊 استراتيجيات تسويق</div>
+</div>
+</section><section class="stats">
 <div class="title">الإحصائيات</div>
 <div class="grid">
-<div class="card"><h2>10+</h2><p>سنوات خبرة</p></div>
-<div class="card"><h2>500+</h2><p>عميل</p></div>
-<div class="card"><h2>1200+</h2><p>حملة ناجحة</p></div>
-<div class="card"><h2>12480</h2><p>زيارات</p></div>
+<div class="card"><h2 class="counter" data-target="10">0</h2><p>سنوات خبرة</p></div>
+<div class="card"><h2 class="counter" data-target="500">0</h2><p>عميل</p></div>
+<div class="card"><h2 class="counter" data-target="1200">0</h2><p>حملة</p></div>
+<div class="card"><h2 class="counter" data-target="12480">0</h2><p>زيارات</p></div>
 </div>
-</section><!-- TESTIMONIALS --><section>
+</section><section>
 <div class="title">آراء العملاء</div>
 <div class="testimonials">
-<div class="card">"نتائج ممتازة جدًا وحملات ناجحة من أول أسبوع"<br><b>أحمد</b></div>
-<div class="card">"زاد المبيعات بشكل واضح وملحوظ"<br><b>سارة</b></div>
-<div class="card">"فريق احترافي ويهتم بالتفاصيل"<br><b>محمد</b></div>
-<div class="card">"أفضل شركة تعاملت معها في التسويق"<br><b>منى</b></div>
+<div class="card">⭐⭐⭐⭐⭐<br>نتائج ممتازة جدًا<br><b>أحمد</b></div>
+<div class="card">⭐⭐⭐⭐⭐<br>خدمة قوية وسريعة<br><b>سارة</b></div>
+<div class="card">⭐⭐⭐⭐⭐<br>فريق احترافي جدًا<br><b>محمد</b></div><div class="hidden more">
+<div class="card">⭐⭐⭐⭐⭐<br>زيادة واضحة في المبيعات<br><b>منى</b></div>
+<div class="card">⭐⭐⭐⭐⭐<br>أفضل تجربة تسويق<br><b>كريم</b></div>
+<div class="card">⭐⭐⭐⭐⭐<br>شغل احترافي ومميز<br><b>نور</b></div>
 </div>
-</section><!-- CONTACT --><section class="contact">
+</div><center><button class="more-btn" onclick="document.querySelector('.more').style.display='grid';this.style.display='none'">عرض المزيد</button></center>
+</section><section class="contact">
 <div class="title">تواصل معنا</div>
 <form>
 <input placeholder="الاسم">
@@ -219,57 +132,23 @@ filter:drop-shadow(0 0 8px #ffffff);
 <textarea placeholder="رسالتك"></textarea>
 <button type="submit">إرسال واتساب</button>
 </form>
-</section><footer>© التاجر للدعاية والإعلان</footer><!-- AI SCI-FI BACKGROUND --><canvas id="bg"></canvas>
-
-<style>
-#bg{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-z-index:-1;
+</section><footer>© التاجر للدعاية والإعلان</footer><script>
+const counters=document.querySelectorAll('.counter');
+const obs=new IntersectionObserver(entries=>{
+entries.forEach(e=>{
+if(e.isIntersecting){
+let el=e.target;
+let target=+el.dataset.target;
+let count=0;
+let step=target/80;
+let t=setInterval(()=>{
+count+=step;
+if(count>=target){count=target;clearInterval(t)}
+el.innerText=Math.floor(count).toLocaleString();
+},20);
+obs.unobserve(el);
 }
-</style><script>
-const canvas=document.getElementById('bg');
-const ctx=canvas.getContext('2d');
-
-function resize(){
-canvas.width=window.innerWidth;
-canvas.height=window.innerHeight;
-}
-resize();
-window.addEventListener('resize',resize);
-
-let particles=[];
-for(let i=0;i<80;i++){
-particles.push({
- x:Math.random()*canvas.width,
- y:Math.random()*canvas.height,
- r:Math.random()*2,
- dx:(Math.random()-0.5)*0.5,
- dy:(Math.random()-0.5)*0.5
-});
-}
-
-function draw(){
-ctx.clearRect(0,0,canvas.width,canvas.height);
-ctx.fillStyle='rgba(255,255,255,0.6)';
-
-particles.forEach(p=>{
-ctx.beginPath();
-ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
-ctx.fill();
-
-p.x+=p.dx;
-p.y+=p.dy;
-
-if(p.x<0||p.x>canvas.width) p.dx*=-1;
-if(p.y<0||p.y>canvas.height) p.dy*=-1;
-});
-
-requestAnimationFrame(draw);
-}
-draw();
+});},{threshold:0.5});
+counters.forEach(c=>obs.observe(c));
 </script></body>
 </html>
