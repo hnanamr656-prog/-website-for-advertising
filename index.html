@@ -67,16 +67,42 @@ footer{text-align:center;padding:30px;background:#000;opacity:.7}
 <div class="card" style="text-align:center"><h2>+10</h2><p>سنوات خبرة</p></div>
 <div class="card" style="text-align:center"><h2>+500</h2><p>عميل</p></div>
 <div class="card" style="text-align:center"><h2>+1200</h2><p>حملة</p></div>
+<div class="card" style="text-align:center">
+<h2 id="visits">0</h2>
+<p>عدد زيارات الموقع</p>
 </div>
-</section><section>
+</div>
+</section><script>
+// Visitor counter (CountAPI - real shared counter)
+fetch('https://api.countapi.xyz/hit/tager-agency/main')
+.then(res=>res.json())
+.then(data=>{
+  document.getElementById('visits').innerText = data.value;
+});
+</script><section>
 <div class="title">آراء العملاء</div>
 <div class="testimonial-slider">
 <div class="testimonial-track">
-<div class="card">⭐ ⭐ ⭐ ⭐ ⭐<br>"خدمة ممتازة ونتائج قوية"<br><b>أحمد</b></div>
-<div class="card">⭐ ⭐ ⭐ ⭐ ⭐<br>"زادت المبيعات بشكل واضح"<br><b>سارة</b></div>
-<div class="card">⭐ ⭐ ⭐ ⭐ ⭐<br>"فريق احترافي جدًا"<br><b>محمد</b></div>
-<div class="card">⭐ ⭐ ⭐ ⭐ ⭐<br>"أفضل تجربة تسويق"<br><b>منى</b></div>
-<div class="card">⭐ ⭐ ⭐ ⭐ ⭐<br>"نتائج سريعة ومبهرة"<br><b>كريم</b></div>
+<div class="card">⭐ ⭐ ⭐ ⭐ ⭐<br>"خدمة ممتازة ونتائج قوية خلال وقت قصير"<br><b>أحمد</b></div>
+<div class="card">⭐ ⭐ ⭐ ⭐ ⭐<br>"زادت المبيعات بشكل واضح بعد الحملات"<br><b>سارة</b></div>
+<div class="card">⭐ ⭐ ⭐ ⭐ ⭐<br>"فريق محترف جدًا في التعامل"<br><b>محمد</b></div>
+<div class="card">⭐ ⭐ ⭐ ⭐ ⭐<br>"أفضل تجربة تسويق فعلًا"<br><b>منى</b></div>
+<div class="card">⭐ ⭐ ⭐ ⭐ ⭐<br>"نتائج سريعة ومبهرة جدًا"<br><b>كريم</b></div>
+<div class="card">⭐ ⭐ ⭐ ⭐ ⭐<br>"خدمة ممتازة ومتابعة مستمرة"<br><b>نور</b></div>
+<div class="card">⭐ ⭐ ⭐ ⭐ ⭐<br>"الإعلانات جابت عملاء حقيقيين"<br><b>أحمد علي</b></div>
+<div class="card">⭐ ⭐ ⭐ ⭐ ⭐<br>"تحسن واضح في المبيعات خلال أسبوع"<br><b>دينا</b></div>
+<div class="card">⭐ ⭐ ⭐ ⭐ ⭐<br>"تصميم احترافي وخدمة ممتازة"<br><b>يوسف</b></div>
+<div class="card">⭐ ⭐ ⭐ ⭐ ⭐<br>"فهموا شغلنا من أول مرة"<br><b>هبة</b></div>
+<div class="card">⭐ ⭐ ⭐ ⭐ ⭐<br>"نتائج فوق المتوقع بكتير"<br><b>خالد</b></div>
+<div class="card">⭐ ⭐ ⭐ ⭐ ⭐<br>"دعم سريع ومتابعة ممتازة"<br><b>ياسمين</b></div>
+<div class="card">⭐ ⭐ ⭐ ⭐ ⭐<br>"ساعدونا نوصل لعملاء أكتر"<br><b>طارق</b></div>
+<div class="card">⭐ ⭐ ⭐ ⭐ ⭐<br>"شغل احترافي جدًا جدًا"<br><b>ريم</b></div>
+<div class="card">⭐ ⭐ ⭐ ⭐ ⭐<br>"تحسن رهيب في التفاعل"<br><b>مازن</b></div>
+<div class="card">⭐ ⭐ ⭐ ⭐ ⭐<br>"أفضل شركة تعاملنا معها"<br><b>فرح</b></div>
+<div class="card">⭐ ⭐ ⭐ ⭐ ⭐<br>"الإعلانات كانت دقيقة وفعالة"<br><b>عمر</b></div>
+<div class="card">⭐ ⭐ ⭐ ⭐ ⭐<br>"نتائج سريعة جدًا ومضمونة"<br><b>سلمى</b></div>
+<div class="card">⭐ ⭐ ⭐ ⭐ ⭐<br>"التعامل كان سهل وراقي"<br><b>حسن</b></div>
+<div class="card">⭐ ⭐ ⭐ ⭐ ⭐<br>"شركة محترمة جدًا في الشغل"<br><b>ليلى</b></div>
 </div>
 </div>
 </section><section class="contact">
