@@ -4,8 +4,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>التاجر للدعاية والإعلان</title><link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet"><style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Cairo',sans-serif}
-body{background:#0a0a0a;color:#fff;overflow-x:hidden}
+body{
+background: radial-gradient(circle at 20% 20%, #1a1a2e, #0a0a0a 40%), linear-gradient(120deg,#0a0a0a,#111827);
+background-size:200% 200%;
+animation:bgMove 10s ease-in-out infinite;
+color:#fff;overflow-x:hidden
+}
+@keyframes bgMove{
+0%{background-position:0% 50%}
+50%{background-position:100% 50%}
+100%{background-position:0% 50%}
+}
 
+/* NAV */
 nav{
 position:fixed;top:0;width:100%;display:flex;justify-content:space-between;align-items:center;
 padding:18px 10%;
@@ -14,24 +25,16 @@ backdrop-filter:blur(22px);
 border-bottom:1px solid rgba(255,255,255,0.08);
 z-index:1000
 }
-nav h2{font-weight:800;letter-spacing:1px}
+nav h2{font-weight:800}
 nav ul{display:flex;gap:18px;list-style:none;font-size:14px;opacity:.8}
 
+/* HERO */
 .hero{
-height:100vh;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
-padding:0 10%;
+height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:0 10%;
 background:radial-gradient(circle at top,#1a1a1a,#000)
 }
-.hero h1{
-font-size:64px;
-font-weight:900;
-line-height:1.1
-}
-.hero p{margin-top:15px;font-size:18px;opacity:.75;max-width:700px;margin-inline:auto}
+.hero h1{font-size:64px;font-weight:900;line-height:1.1}
+.hero p{margin-top:15px;opacity:.75;font-size:18px;max-width:700px;margin-inline:auto}
 .btn{margin-top:25px;padding:14px 35px;border:none;border-radius:30px;background:#fff;color:#000;font-weight:700;cursor:pointer}
 
 section{padding:110px 10%}
@@ -61,22 +64,21 @@ text-align:center
 .testimonials .hidden{display:none}
 
 button.more-btn{
-margin-top:25px;
-padding:12px 25px;
-border:none;
-border-radius:25px;
-background:#fff;
-color:#000;
-font-weight:700;
-cursor:pointer
+margin-top:25px;padding:12px 25px;border:none;border-radius:25px;background:#fff;color:#000;font-weight:700;cursor:pointer
 }
 
-.contact{background:#111}
-input,textarea,select{width:100%;padding:14px;margin:10px 0;border-radius:12px;border:none;background:#1a1a1a;color:#fff}
-button{padding:14px 25px;border:none;border-radius:30px;background:#25d366;color:#fff;font-weight:700;cursor:pointer}
+input,textarea,select{
+width:100%;padding:14px;margin:10px 0;border-radius:12px;border:none;background:#1a1a1a;color:#fff
+}
+button.submit{padding:14px 25px;border:none;border-radius:30px;background:#25d366;color:#fff;font-weight:700;cursor:pointer}
 footer{text-align:center;padding:40px;opacity:.5}
+
+/* particles */
+canvas{position:fixed;top:0;left:0;z-index:-1}
 </style></head>
-<body><nav>
+<body><canvas id="bg"></canvas>
+
+<nav>
 <h2>التاجر</h2>
 <ul>
 <li>الرئيسية</li>
@@ -94,41 +96,54 @@ footer{text-align:center;padding:40px;opacity:.5}
 </div>
 </div><section class="about">
 <div class="title">من نحن</div>
-<p>شركة التاجر للدعاية والإعلان متخصصة في التسويق الرقمي، الإعلانات الممولة، وتصميم الهويات البصرية، نساعد الشركات على النمو الحقيقي وتحقيق مبيعات فعلية من خلال استراتيجيات مدروسة.</p>
+<p>شركة التاجر للدعاية والإعلان شركة متخصصة في التسويق الرقمي والإعلانات الممولة وبناء الهوية التجارية وتحويل المشاريع إلى علامات ناجحة في السوق.</p>
+</section><section>
+<div class="title">خدماتنا</div>
+<div class="grid">
+<div class="card service">📢 إدارة الحملات الإعلانية</div>
+<div class="card service">📱 إدارة السوشيال ميديا</div>
+<div class="card service">🎨 تصميم هوية بصرية</div>
+<div class="card service">🌐 تصميم مواقع</div>
+<div class="card service">🤖 بوتات تيليجرام</div>
+<div class="card service">📊 استراتيجيات تسويق</div>
+</div>
+</section><section class="stats">
+<div class="title">الإحصائيات</div>
+<div class="grid">
+<div class="card"><h2 class="counter" data-target="10">0</h2><p>سنوات خبرة</p></div>
+<div class="card"><h2 class="counter" data-target="500">0</h2><p>عميل</p></div>
+<div class="card"><h2 class="counter" data-target="1200">0</h2><p>حملة</p></div>
+<div class="card"><h2 class="counter" data-target="12480">0</h2><p>زيارات</p></div>
+</div>
 </section><section>
 <div class="title">آراء العملاء</div>
-<div class="testimonials"><div class="card">⭐⭐⭐⭐⭐<br>نتائج ممتازة جدًا وسريعة<br><b>أحمد</b></div>
-<div class="card">⭐⭐⭐⭐⭐<br>خدمة احترافية واهتمام بالتفاصيل<br><b>سارة</b></div>
-<div class="card">⭐⭐⭐⭐⭐<br>فريق ممتاز ونتائج واضحة<br><b>محمد</b></div>
-<div class="card">⭐⭐⭐⭐⭐<br>تحسن كبير في المبيعات<br><b>منى</b></div>
-<div class="card">⭐⭐⭐⭐⭐<br>أفضل شركة تعاملت معها<br><b>كريم</b></div>
-<div class="card">⭐⭐⭐⭐⭐<br>شغل احترافي جدًا وسريع<br><b>نور</b></div>
-<div class="card">⭐⭐⭐⭐⭐<br>حملات ناجحة ونتائج قوية<br><b>علي</b></div>
-<div class="card">⭐⭐⭐⭐⭐<br>رفعوا مستوى البراند بشكل كبير<br><b>ليلى</b></div><div class="hidden more">
-<div class="card">⭐⭐⭐⭐⭐<br>زيادة واضحة في العملاء خلال فترة قصيرة<br><b>أحمد علي</b></div>
-<div class="card">⭐⭐⭐⭐⭐<br>إعلانات فعالة جدًا ومربحة<br><b>دينا</b></div>
-<div class="card">⭐⭐⭐⭐⭐<br>فهموا المشروع بسرعة ونفذوا باحتراف<br><b>يوسف</b></div>
-<div class="card">⭐⭐⭐⭐⭐<br>أفضل نتائج تسويق حصلت عليها<br><b>هبة</b></div>
-<div class="card">⭐⭐⭐⭐⭐<br>تحسين كبير في التفاعل والمبيعات<br><b>خالد</b></div>
-<div class="card">⭐⭐⭐⭐⭐<br>خدمة دعم ممتازة جدًا<br><b>فرح</b></div>
-<div class="card">⭐⭐⭐⭐⭐<br>نتائج فوق المتوقع تمامًا<br><b>عمر</b></div>
-<div class="card">⭐⭐⭐⭐⭐<br>إدارة حملات احترافية جدًا<br><b>مريم</b></div>
-<div class="card">⭐⭐⭐⭐⭐<br>نتائج سريعة ومبهرة<br><b>إبراهيم</b></div>
-<div class="card">⭐⭐⭐⭐⭐<br>تحسن قوي في المبيعات خلال أيام<br><b>رنا</b></div>
-<div class="card">⭐⭐⭐⭐⭐<br>فريق متعاون جدًا ونتائج ممتازة<br><b>سليم</b></div>
-<div class="card">⭐⭐⭐⭐⭐<br>أفضل تجربة تسويق رقمية<br><b>جنى</b></div>
-<div class="card">⭐⭐⭐⭐⭐<br>خدمة عالية الجودة ومتابعة مستمرة<br><b>طارق</b></div>
-<div class="card">⭐⭐⭐⭐⭐<br>نتائج قوية وتواصل ممتاز<br><b>هدى</b></div>
-</div><center><button class="more-btn" onclick="document.querySelector('.more').style.display='grid';this.style.display='none'">عرض المزيد</button></center>
-</section><section class="contact">
+<div class="grid testimonials">
+<div class="card">⭐⭐⭐⭐⭐<br>نتائج قوية جدًا<br><b>أحمد</b></div>
+<div class="card">⭐⭐⭐⭐⭐<br>احترافية عالية<br><b>سارة</b></div>
+<div class="card">⭐⭐⭐⭐⭐<br>فريق ممتاز<br><b>محمد</b></div>
+<div class="card">⭐⭐⭐⭐⭐<br>زيادة المبيعات<br><b>منى</b></div>
+<div class="hidden more">
+<div class="card">⭐⭐⭐⭐⭐<br>نتائج ممتازة<br><b>كريم</b></div>
+<div class="card">⭐⭐⭐⭐⭐<br>أفضل خدمة<br><b>نور</b></div>
+<div class="card">⭐⭐⭐⭐⭐<br>شغل احترافي<br><b>علي</b></div>
+<div class="card">⭐⭐⭐⭐⭐<br>تحسن كبير<br><b>ليلى</b></div>
+<div class="card">⭐⭐⭐⭐⭐<br>نتائج سريعة<br><b>يوسف</b></div>
+<div class="card">⭐⭐⭐⭐⭐<br>خدمة قوية<br><b>هبة</b></div>
+<div class="card">⭐⭐⭐⭐⭐<br>أفضل شركة<br><b>خالد</b></div>
+<div class="card">⭐⭐⭐⭐⭐<br>تجربة ممتازة<br><b>فرح</b></div>
+</div>
+</div>
+<center><button class="more-btn" onclick="document.querySelector('.more').style.display='grid';this.style.display='none'">عرض المزيد</button></center>
+</section><section>
 <div class="title">تواصل معنا</div>
-<form>
-<input placeholder="الاسم">
-<input placeholder="رقم الهاتف">
-<textarea placeholder="رسالتك"></textarea>
-<button type="submit">إرسال واتساب</button>
+<form onsubmit="sendWA(event)">
+<input id="name" placeholder="الاسم">
+<input id="phone" placeholder="رقم الهاتف">
+<textarea id="msg" placeholder="رسالتك"></textarea>
+<button class="submit">إرسال واتساب</button>
 </form>
 </section><footer>© التاجر للدعاية والإعلان</footer><script>
+// COUNTERS
 const counters=document.querySelectorAll('.counter');
 const obs=new IntersectionObserver(entries=>{
 entries.forEach(e=>{
@@ -146,5 +161,21 @@ obs.unobserve(el);
 }
 });},{threshold:0.5});
 counters.forEach(c=>obs.observe(c));
+
+// WHATSAPP
+function sendWA(e){
+e.preventDefault();
+let n=name.value,p=phone.value,m=msg.value;
+let text=`التاجر للدعاية والإعلان%0Aالاسم:${n}%0Aالرقم:${p}%0Aالرسالة:${m}`;
+window.open(`https://wa.me/201024941083?text=${text}`);
+}
+
+// PARTICLES
+const c=document.getElementById("bg");
+const x=c.getContext("2d");
+c.width=window.innerWidth;c.height=window.innerHeight;
+let p=[];
+for(let i=0;i<70;i++){p.push({x:Math.random()*c.width,y:Math.random()*c.height,r:Math.random()*2,dx:(Math.random()-0.5),dy:(Math.random()-0.5)})}
+function d(){x.clearRect(0,0,c.width,c.height);x.fillStyle="#fff";p.forEach(a=>{x.beginPath();x.arc(a.x,a.y,a.r,0,Math.PI*2);x.fill();a.x+=a.dx;a.y+=a.dy;if(a.x<0||a.x>c.width)a.dx*=-1;if(a.y<0||a.y>c.height)a.dy*=-1});requestAnimationFrame(d)}d();
 </script></body>
 </html>
