@@ -61,6 +61,40 @@ animation-play-state:paused;
 0%{transform:translateX(0)}
 100%{transform:translateX(-50%)}
 }
+100%{transform:translateX(-85%)}
+}
+
+.testimonial-slider .card{
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  padding: 30px;
+}
+
+.testimonial-slider{overflow:hidden;position:relative}
+.testimonial-track{display:flex;gap:20px;width:max-content;animation:slideTestimonials 18s linear infinite}
+.testimonial-slider:hover .testimonial-track,
+.testimonial-slider:active .testimonial-track{
+animation-play-state:paused;
+}
+
+.client-logo{
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  padding: 20px;
+  border-radius: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  opacity: 0.8;
+  transition: 0.3s;
+}
+.client-logo:hover{
+  opacity: 1;
+  transform: scale(1.05);
+}
 
 footer{text-align:center;padding:40px;background:#000;opacity:.7}
 </style></head>
@@ -104,22 +138,42 @@ footer{text-align:center;padding:40px;background:#000;opacity:.7}
 <div class="title">آراء العملاء</div>
 <div class="testimonial-slider">
   <div class="testimonial-track">
-    <div class="card" style="text-align:center">
-      <p>⭐ ⭐ ⭐ ⭐ ⭐</p>
-      <p>"التعامل كان راقٍ جدًا والحملة جابت نتائج أسرع من المتوقع."</p>
-      <strong>أحمد</strong>
-    </div>
-    <div class="card" style="text-align:center">
-      <p>⭐ ⭐ ⭐ ⭐ ⭐</p>
-      <p>"التصميم والإعلانات ساعدونا نوصل لعملاء جدد بشكل واضح."</p>
-      <strong>سارة</strong>
-    </div>
-    <div class="card" style="text-align:center">
-      <p>⭐ ⭐ ⭐ ⭐ ⭐</p>
-      <p>"شركة محترفة والرد سريع جدًا والتنفيذ ممتاز."</p>
-      <strong>محمد</strong>
-    </div>
-  </div>
+    <div class="card" style="text-align:center"><p>⭐ ⭐ ⭐ ⭐ ⭐</p><p>"التعامل كان راقٍ جدًا والحملة جابت نتائج أسرع من المتوقع."</p><strong>أحمد</strong></div>
+    <div class="card" style="text-align:center"><p>⭐ ⭐ ⭐ ⭐ ⭐</p><p>"التصميم والإعلانات ساعدونا نوصل لعملاء جدد بشكل واضح."</p><strong>سارة</strong></div>
+    <div class="card" style="text-align:center"><p>⭐ ⭐ ⭐ ⭐ ⭐</p><p>"شركة محترفة والرد سريع جدًا والتنفيذ ممتاز."</p><strong>محمد</strong></div>
+    <div class="card" style="text-align:center"><p>⭐ ⭐ ⭐ ⭐ ⭐</p><p>"فريق متعاون جدًا وفهم احتياج المشروع من أول مكالمة."</p><strong>منة</strong></div>
+    <div class="card" style="text-align:center"><p>⭐ ⭐ ⭐ ⭐ ⭐</p><p>"لاحظنا زيادة واضحة في الرسائل بعد أول حملة."</p><strong>كريم</strong></div>
+    <div class="card" style="text-align:center"><p>⭐ ⭐ ⭐ ⭐ ⭐</p><p>"الهوية الجديدة خلت البراند شكله أقوى بكثير."</p><strong>نور</strong></div>
+    <div class="card" style="text-align:center"><p>⭐ ⭐ ⭐ ⭐ ⭐</p><p>"التسويق كان منظم والنتائج فاقت توقعاتنا."</p><strong>محمود</strong></div>
+    <div class="card" style="text-align:center"><p>⭐ ⭐ ⭐ ⭐ ⭐</p><p>"سرعة الرد والمتابعة كانت من أفضل ما يميزهم."</p><strong>ياسمين</strong></div>
+    <div class="card" style="text-align:center"><p>⭐ ⭐ ⭐ ⭐ ⭐</p><p>"أصبح عندنا عملاء جدد بشكل مستمر من الإعلانات."</p><strong>علي</strong></div>
+    <div class="card" style="text-align:center"><p>⭐ ⭐ ⭐ ⭐ ⭐</p><p>"خطة التسويق كانت واضحة ومناسبة لميزانيتنا."</p><strong>هبة</strong></div>
+    <div class="card" style="text-align:center"><p>⭐ ⭐ ⭐ ⭐ ⭐</p><p>"التعامل كان راقٍ جدًا والحملة جابت نتائج أسرع من المتوقع."</p><strong>أحمد</strong></div>
+    <div class="card" style="text-align:center"><p>⭐ ⭐ ⭐ ⭐ ⭐</p><p>"التصميم والإعلانات ساعدونا نوصل لعملاء جدد بشكل واضح."</p><strong>سارة</strong></div>
+    <div class="card" style="text-align:center"><p>⭐ ⭐ ⭐ ⭐ ⭐</p><p>"شركة محترفة والرد سريع جدًا والتنفيذ ممتاز."</p><strong>محمد</strong></div>
+    <div class="card" style="text-align:center"><p>⭐ ⭐ ⭐ ⭐ ⭐</p><p>"فريق متعاون جدًا وفهم احتياج المشروع من أول مكالمة."</p><strong>منة</strong></div>
+    <div class="card" style="text-align:center"><p>⭐ ⭐ ⭐ ⭐ ⭐</p><p>"لاحظنا زيادة واضحة في الرسائل بعد أول حملة."</p><strong>كريم</strong></div>
+    <div class="card" style="text-align:center"><p>⭐ ⭐ ⭐ ⭐ ⭐</p><p>"الهوية الجديدة خلت البراند شكله أقوى بكثير."</p><strong>نور</strong></div>
+    <div class="card" style="text-align:center"><p>⭐ ⭐ ⭐ ⭐ ⭐</p><p>"التسويق كان منظم والنتائج فاقت توقعاتنا."</p><strong>محمود</strong></div>
+    <div class="card" style="text-align:center"><p>⭐ ⭐ ⭐ ⭐ ⭐</p><p>"سرعة الرد والمتابعة كانت من أفضل ما يميزهم."</p><strong>ياسمين</strong></div>
+    <div class="card" style="text-align:center"><p>⭐ ⭐ ⭐ ⭐ ⭐</p><p>"أصبح عندنا عملاء جدد بشكل مستمر من الإعلانات."</p><strong>علي</strong></div>
+    <div class="card" style="text-align:center"><p>⭐ ⭐ ⭐ ⭐ ⭐</p><p>"خطة التسويق كانت واضحة ومناسبة لميزانيتنا."</p><strong>هبة</strong></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section><section>
+<div class="title">عملاؤنا</div>
+<div class="clients-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:20px;align-items:center;justify-items:center;">
+  <div class="client-logo">Google</div>
+  <div class="client-logo">Meta</div>
+  <div class="client-logo">Amazon</div>
+  <div class="client-logo">Nike</div>
+  <div class="client-logo">Samsung</div>
+  <div class="client-logo">CocaCola</div>
+  <div class="client-logo">Uber</div>
+  <div class="client-logo">Netflix</div>
 </div>
 </section><section class="contact">
 <h2>تواصل معنا عبر واتساب</h2><form id="contactForm">
